@@ -21,7 +21,7 @@ body{
 }
 
 .Header {
-    background-image: url('/images/backgound1.png'); /* Corrected the image path */
+    background-image: url('images/backgound1.png'); /* Corrected the image path */
     height: 100vh; /* Set a height for the background div */
     width: 100%;
     background-size: cover; /* Ensure the background covers the div properly */ 
