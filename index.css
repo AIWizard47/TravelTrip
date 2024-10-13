@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --ocean-blue: #1E90FF;
+    --leaf-green: #32CD32;
+    --stone-grey: #708090;
+    --sunflower-yellow: #FFD700;
+    --blossom-pink: #FFB6C1;
+    --earth-brown: #8B4513;
+    --forest-green: #228B22;
+}
+body{   
+    background: #708090;
+    font-family: Arial, sans-serif;
+}
+
+.Header {
+    background-image: url('backgound1.png'); /* Corrected the image path */
+    height: 100vh; /* Set a height for the background div */
+    width: 100%;
+    background-size: cover; /* Ensure the background covers the div properly */ 
+    background-position: center;
+    background-attachment: fixed;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black transparent overlay */
+    z-index: 1; /* Keep it behind the text */
+}
+nav{
+    background-color: black;
+    position:relative;
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(11, 151, 255, 0.3);
+}
+li{
+    display: inline;
+}
+nav button.loginbtn{
+    background-color: #ffffff;
+    float: right;
+    margin-right: 3vw;
+    padding: 6px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+nav button.loginbtn:hover{
+    background-color: #E6E6FA;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 3vw;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+a:hover{
+    color: #FFD700;
+    transition: 0.5s;
+}
+ul{
+    margin-top: 3vh;
+}
+h2{
+    padding-top: 30vh;  
+    padding-left: 10vw;
+    font-size: 3em;
+    font-weight: bolder;
+}
+.slogan-box{
+    width: 80vw;
+    height: 20vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -250%); /* Center the slogan box */
+    text-align: center;
+    z-index: 2; /* Keep the text above the overlay */
+}
+.header-slogan-top{
+    z-index: 10;
+    text-align: center;
+    color: yellow;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    animation: fadeInBright1 2.5s ease-in-out forwards; /* Slight delay for a smooth effect */
+}
+.header-slogan-bottom{
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    animation: fadeInBright2 2.5s ease-in-out forwards; /* Slight delay for a smooth effect */
+}
+.header-button .button {
+    transform: translate(55%, 40%);
+    font-size: 16px; /* Adjusts the font size */
+    padding: 10px 20px; /* Adds padding to the button */
+    background-color: #1e8fff; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds the corners */
+    cursor: pointer; /* Changes the cursor on hover */
+    transition: background-color 0.3s ease; /* Adds a smooth hover transition */
+}
+
+.header-button .button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* Adding the fade-in animation */
+@keyframes fadeInBright1 {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        color: #333; /* Start with darker text */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        color: #ffffff; /* Brighten the text */
+    }
+}
+@keyframes fadeInBright2 {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        color: #333; /* Start with darker text */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        color: var(--sunflower-yellow); /* Brighten the text */
+    }
+}
+.slogan-box h2 {
+    animation: fadeInBright 2s ease-in-out forwards; /* Animate for 2 seconds */
+}
+
+
+.middle{
+    height: 100vh; /* Set a height for the background div */
+    width: 100%;
+    background-size: cover; /* Ensure the background covers the div properly */ 
+    background-position: center;
+    background-attachment: fixed;
+}
+.mid-container{
+    padding: 50px;
+}
+.america , .india {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    flex-wrap: wrap; /* Allow the items to wrap onto the next line when there's no space */
+    justify-content: space-around; /* Distribute space between the items */
+    padding: 20px;
+}
+.mid-container h1{
+    font-size:  1.4em;
+    padding-top: 50px;
+}
+hr {
+    border: 2px solid black; /* Define a solid black border for the horizontal rule */
+    width: 40%; /* Adjust the width of the hr */
+}
+.america .img , .india .img {
+    width: 20vw; /* Set a responsive width */
+    height: auto;
+    margin: 20px; /* Add some margin for spacing between items */
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+    background-color: white; /* Background color to differentiate images */
+    text-align: center;
+}
+
+.america .img img , .india .img img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.america .img h1 ,.india .img h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.america .img p ,.india .img p {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+}
+.mid-container .heading-h1-explore{
+    font-size: 3.5em;
+}
