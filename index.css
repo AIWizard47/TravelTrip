@@ -16,7 +16,7 @@ html {
     --forest-green: #228B22;
 }
 body{   
-    background: #708090;
+    background: var(--leaf-green);
     font-family: Arial, sans-serif;
 }
 
@@ -157,7 +157,15 @@ h2{
 }
 
 
-.middle{
+.middle , .middle2{
+    height: 200vh; /* Set a height for the background div */
+    width: 100%;
+    background-size: cover; /* Ensure the background covers the div properly */ 
+    background-position: center;
+    background-attachment: fixed;
+}
+.middle2 {
+    background-image: url('background3.jpg'); /* Corrected the image path */
     height: 100vh; /* Set a height for the background div */
     width: 100%;
     background-size: cover; /* Ensure the background covers the div properly */ 
@@ -174,23 +182,26 @@ h2{
     padding: 20px;
 }
 .mid-container h1{
-    font-size:  1.4em;
+    font-size:  1.8em;
     padding-top: 50px;
+    
 }
 hr {
-    border: 2px solid black; /* Define a solid black border for the horizontal rule */
+    border: 2px solid yellow; /* Define a solid black border for the horizontal rule */
     width: 40%; /* Adjust the width of the hr */
 }
 .america .img , .india .img {
+    cursor: pointer;
     width: 20vw; /* Set a responsive width */
     height: auto;
     margin: 20px; /* Add some margin for spacing between items */
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
-    background-color: white; /* Background color to differentiate images */
+    background-color: #BAB86C; /* Background color to differentiate images */
     text-align: center;
 }
+
 
 .america .img img , .india .img img{
     width: 100%;
@@ -199,15 +210,124 @@ hr {
 }
 
 .america .img h1 ,.india .img h1 {
+    color: whitesmoke;
     font-size: 1.5em;
     margin-bottom: 10px;
+    
 }
 
 .america .img p ,.india .img p {
     font-size: 1em;
-    color: #333;
+    color: whitesmoke;
     margin-top: 10px;
 }
 .mid-container .heading-h1-explore{
     font-size: 3.5em;
 }
+
+
+footer {
+    background-color: black;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+  }
+  footer * {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+  
+  .row {
+    padding: 1em 1em;
+  }
+  .row.primary {
+    display: grid;
+    grid-template-columns: 3fr 2fr 4fr;
+    align-items: stretch;
+  }
+  .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+  }
+  h3 {
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: 1.4em;
+    white-space: nowrap;
+  }
+  .footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .footer li:not(:first-child) {
+    margin-top: 0.8em;
+  }
+  .footer ul li a {
+    color: #a7a7a7;
+    text-decoration: none;
+  }
+  .footer ul li a:hover {
+    color: #c7940a;
+  }
+  .about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+  }
+  input,
+  .footer button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  .footer button {
+    background-color: #c7940a;
+    color: #ffffff;
+  }
+  div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+  }
+  .social i {
+    color: #bac6d9;
+  }
+  .copyright {
+    padding: 1.3em 1em;
+    background-color: #25262e;
+  }
+  .footer-menu{
+    float: left;    
+      margin-top: 10px;
+  }
+  .footer-menu a{
+    color: #cfd2d6;
+    padding: 6px;
+    text-decoration: none;
+  }
+  .footer-menu a:hover, .social i:hover{
+    color: #c7940a;
+  }
+  .copyright p {
+    font-size: 0.9em;
+    text-align: right;
+  }
+  @media screen and (max-width: 850px) {
+    .row.primary {
+      grid-template-columns: 1fr;
+    }
+  }
+  
